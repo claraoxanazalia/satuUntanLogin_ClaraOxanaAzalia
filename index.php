@@ -39,9 +39,19 @@
 
                 <p class="or">---------- atau lanjutkan dengan ----------</p>
 
-                <!-- Form login -->
+                
+                
+
+
                 <form action="login_process.php" method="POST">
-                    <label for="email">Email / Akun Pengguna <span class="required">*</span></label>
+                 <?php
+                    session_start();
+                    if (isset($_SESSION['error'])) {
+                        echo "<p style='color:red; text-align:center;'>" . $_SESSION['error'] . "</p>";
+                        unset($_SESSION['error']);
+                    }
+                ?>    
+                <label for="email">Email / Akun Pengguna <span class="required">*</span></label>
                     <input type="text" id="email" name="email" placeholder="Masukkan email / NIM / NIP / username" required>
 
                     <label for="password">Password <span class="required">*</span></label>

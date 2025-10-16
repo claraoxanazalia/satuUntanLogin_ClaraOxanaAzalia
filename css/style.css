@@ -1,0 +1,247 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('../assets/bg.jpg') repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.login-container {
+    display: flex;
+    width: 920px;
+    height: 560px;
+    background: #fff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+.left-side {
+    width: 45%;
+    position: relative;
+    background-color: #111;
+}
+
+.left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 25px;
+    color: #fff;
+}
+
+.text-overlay .welcome {
+    font-size: 15px;
+    color: #ccff00;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.text-overlay h2 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.right-side {
+    width: 55%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.login-box {
+    width: 100%;
+}
+
+
+.logo-section {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 8px 0 4px;
+    color: #333;
+}
+
+.subtext {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+.google-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.google-btn:hover {
+    background: #f3f3f3;
+}
+
+.google-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.or {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    margin: 18px 0;
+}
+
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    font-size: 13px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0069d9;
+}
+
+.password-box {
+    position: relative;
+}
+
+.toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #0069d9;
+    margin-bottom: 12px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0069d9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.sevima-logo {
+    width: 70px;
+    height: auto;
+    opacity: 0.85;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.sevima-logo:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .left-side {
+        width: 100%;
+        height: 200px;
+    }
+
+    .right-side {
+        width: 100%;
+        padding: 30px;
+    }
+}

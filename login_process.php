@@ -1,21 +1,19 @@
 <?php
 session_start();
-include 'db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
 
-    $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($conn, $query);
+    $valid_user = "clara";
+    $valid_pass = "clara123";
 
-    if (mysqli_num_rows($result) > 0) {
+    if ($email === $valid_user && $password === $valid_pass) {
         $_SESSION['user'] = $email;
         header("Location: dashboard.php");
         exit;
     } else {
-
-        $_SESSION['error'] = "Email atau password salah!";
+        $_SESSION['error'] = "Username atau password salah!";
         header("Location: index.php");
         exit;
     }
